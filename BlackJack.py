@@ -5,7 +5,7 @@ deck = []
 
 def deck_generator():
     """Generates deck of 52 cards"""
-
+    deck.clear()
     suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
     ranks = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King']
 
@@ -36,6 +36,11 @@ class Player:
         """ берет заданое кол-во карт из списка deck, вставляет в список self.cards"""
         for i in range(card_amount):
             self.cards.append(pick_card())
+        self.score_count()
+
+    def clear_hand(self):
+        """ удаляет все карты игрока"""
+        self.cards.clear()
         self.score_count()
 
     @property
