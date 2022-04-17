@@ -1,3 +1,3 @@
 # BlackJack
 
-use BJ_PG.py to start game
+python3 BJ_PG.py # start game
